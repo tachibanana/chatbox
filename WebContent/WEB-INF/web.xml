@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>OnlineMusicPlayer</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>music-player</servlet-name>
+  	<servlet-class>com.app.music.controller.PlayMusicController</servlet-class>
+  	<init-param>
+  		<param-name>music</param-name>
+  		<param-value>escatasy</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>music-player</servlet-name>
+  	<url-pattern>/music/player.do</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  		<param-name>music</param-name>
+  		<param-value>escatasy</param-value>
+  </context-param>
+</web-app>
